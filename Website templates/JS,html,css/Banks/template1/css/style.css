@@ -1,0 +1,209 @@
+/* The theme is of these palletes:
+    #F8F4F8
+    #fce5fc
+    #ffd6ff
+    #f3ceff
+    #e7c6ff
+    all font colors must be black
+*/
+
+ /* General styles */
+body {
+    font-family: 'Open Sans', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+/* Container for the main content
+    AFE9B3
+    D2F2D5
+    FDFDFD
+*/
+section{
+    margin: 0;
+    padding: 0;
+}
+/* Make home section more compact */
+.home {
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+    margin-left: 1rem;
+}
+
+.home h1{
+    font-size: 1.5rem;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
+    color: #4A4A4A;
+}
+
+.home h2{
+    font-size: .8rem;
+    font-family:'Arial' sans-serif;
+    font-weight: 500;
+    color: #4A4A4A;
+
+}
+
+nav{
+    width: 100%;
+    z-index: 100;
+}
+
+.navbar {
+    overflow: hidden;
+    background-color: white;
+}
+
+.navbar a {
+    float: left;
+    display: block;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    color: black;
+}
+
+.navbar a.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.navbar .icon {
+    display: none;
+}
+
+#Home{
+    background-image: linear-gradient(to bottom, #fdfdfd, #f6faff, #e8f8ff, #d9f8fd, #cff7f0, #caf5e6, #c7f3da, #c9f0cd, #c2eec7, #bcedc0, #b5ebba, #afe9b3);
+}
+
+.navbar img{
+    width: 200px;
+    height: 90px;
+}
+
+.mid-image{
+    height: 50%;
+    padding: 1%;
+    background-image: url('../images/imgs/piggy_green.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.horizontal-text{
+    display: inline-block;
+}
+
+.horizontal-text p{
+    font-size: .7rem;
+    font-family:'Arial' sans-serif;
+    font-weight: 400;
+    color: #4A4A4A;
+    text-align: justify;
+    padding: 1%;
+}
+
+.vertical-text{
+    /*put this on right side*/
+    display: inline-block;
+}
+
+.right-text{
+    font-size: .7rem;
+    font-family:'Arial' sans-serif;
+    font-weight: 400;
+    color: #4A4A4A;
+    text-align: justify;
+    width: 40%;
+    margin-left: 60%;
+}
+
+.button-container{
+    margin-top: 20%;
+    margin-left: 75%;
+    display: block;
+}
+
+button{
+    background-color: #ffffff;
+    color: #4A4A4A;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    border-radius: 2%;
+    font-size: .6rem;
+}
+
+button:hover {
+    background-color: #4CAF50;
+    color: rgb(255, 255, 255);
+}
+
+/* What we offer page*/
+
+#offers{
+    background-image: linear-gradient(to bottom, #afe9b3, #b5ebba, #bcedc0, #c2eec7, #c9f0cd, #c7f3da, #caf5e6, #cff7f0, #d9f8fd, #e8f8ff, #f6faff, #fdfdfd);
+    display: flex;
+    flex-direction: column;
+}
+
+#offers img{
+    width: 30%;
+}
+
+.item-1{
+    display: block;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1%;
+
+}
+
+/* Media query for screens smaller than 600px */
+@media screen and (max-width: 600px) {
+
+    /* Make testimonials section more compact */
+    .testimonials {
+        flex-direction: column;
+    }
+
+    .testimonials .card {
+        margin-bottom: 2rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .navbar a {
+        display: none;
+    }
+
+    .navbar a.icon {
+        float: right;
+        display: block;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .navbar.responsive {
+        position: relative;
+    }
+
+    .navbar.responsive .icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    .navbar.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finance</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha384-BsmjIWkYSc1ptKJALnJdImfY4Qkyfbxw1hircFwDMeMR5-Nm8bH4uO6p6Lbm4H5g" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav>
+        <div class="navbar" id="myNavbar">
+            <img src="images/brand/JwalaDevi Logo.png" alt="logo">
+            <a href="#home" class="active">Home</a>
+            <a href="#services">Services</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#contact">Contact</a>
+            <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="collapse_navbar()">=</a>
+        </div>
+    </nav>
+    <script>
+        function collapse_navbar() {
+            var x = document.getElementById("myNavbar");
+            if (x.className === "navbar") {
+                x.className += " responsive";
+            } else {
+                x.className = "navbar";
+            }
+        }
+    </script>
+    <section id="Home">
+        <!-- Home -->
+        <div class="home">
+            <h1>Shree JwalaDevi <br> Multipurpose <br> Co-operative</h1>
+            <h2>Save in Present Save Your Future</h2>
+        </div>
+
+        <div class="mid-image">
+           
+            <div class="horizontal-text">
+            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent arcu turpis, pellentesque at suscipit rutrum,
+            </p>
+            </div>
+            <div class="vertical-text">
+            <div class="right-text">
+            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent arcu turpis, pellentesque at suscipit rutrum,
+            </p>
+            </div>
+            </div>
+
+            <div class="button-container">
+                <button class="btn">Get Started</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="offers">
+        <h1>What we offer?</h1>
+        <div class="item-1">
+            <img src="images/imgs/rate.png" alt="loanrate" id="loan_rate">
+            <h2>Lower Interest Rate in Loans</h2>
+            <p>Get the lowest loan rates in the market. We offer the best rates for all types of loans.</p>
+        </div>
+        <div class="item-2">
+            <img src="images/imgs/returns.png" alt="interest" id="returns">
+            <h2>More Returns in Shares and Savings</h2>
+            <p>Get the highest interest on your savings. We offer the best rates for all types of savings.</p>
+        </div>
+    </section>
+</body>
+</html>
