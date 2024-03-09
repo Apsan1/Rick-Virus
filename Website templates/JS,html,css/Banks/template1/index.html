@@ -28,8 +28,9 @@
             }
         }
     </script>
-    <section id="Home">
+    <section id="Home" class="section">
         <!-- Home -->
+        <br><br>
         <div class="home">
             <h1>Shree JwalaDevi <br> Multipurpose <br> Co-operative</h1>
             <h2>Save in Present Save Your Future</h2>
@@ -49,22 +50,139 @@
             </div>
 
             <div class="button-container">
-                <button class="btn">Get Started</button>
+                <button class="get-started">Get Started</button>
             </div>
         </div>
     </section>
 
-    <section id="offers">
-        <h1>What we offer?</h1>
+    <section id="offers" class="section">
+        <div class="Top">
+            <h1>What we offer?</h1>
+        </div>
         <div class="item-1">
+            <div class="description">
+                <h2>Lower Interest Rate in Loans</h2>
+                <p>Get the lowest loan rates in the market. We offer the best rates for all types of loans.</p>
+            </div>
             <img src="images/imgs/rate.png" alt="loanrate" id="loan_rate">
-            <h2>Lower Interest Rate in Loans</h2>
-            <p>Get the lowest loan rates in the market. We offer the best rates for all types of loans.</p>
         </div>
         <div class="item-2">
             <img src="images/imgs/returns.png" alt="interest" id="returns">
-            <h2>More Returns in Shares and Savings</h2>
-            <p>Get the highest interest on your savings. We offer the best rates for all types of savings.</p>
+            <div class="description">
+                <h2>More Returns in Shares and Savings</h2>
+                <p>Get the highest interest on your savings. We offer the best rates for all types of savings.</p>
+            </div>
+        </div>
+        <h3>We Value Our Customers</h3>
+        <section id="customersinfo" class="section">
+            <div id="active-customers">
+                <h1 class="customers_count">0</h1>
+                <h2>Total Active Customers</h2>
+            </div>
+            <div id="satisfaction-rate">
+                <h1 id="total_rating">0</h1>
+                <h2>Satisfaction Rate</h2>
+            </div>
+            <div id="total-shareholders">
+                <h1 id="shareholders_count">0</h1>
+                <h2>Total ShareHolders</h2>
+            </div>
+        </section>
+
+    <script>
+        var customer_count = 60;
+        var total_rating = 4.5;
+        var shareholders_count = 1500;
+        var customers = document.querySelector('.customers_count');
+        var rating = document.querySelector('#total_rating');
+        var shareholders = document.querySelector('#shareholders_count');
+
+        //make counter animation for all the values
+        //for customers
+        function customer_counter() {
+            var count = 0;
+            var interval = setInterval(() => {
+                count++;
+                customers.textContent = count;
+                if (count === customer_count) {
+                    clearInterval(interval);
+                }
+            }, 50);
+        }
+        //for rating
+        function rating_counter() {
+            var count = 0;
+            var interval = setInterval(() => {
+                count += 0.1;
+                rating.textContent = count.toFixed(1);
+                if (count === total_rating) {
+                    clearInterval(interval);
+                }
+            }, 50);
+        }
+        //for shareholders
+        function shareholders_counter() {
+            var count = 0;
+            var interval = setInterval(() => {
+                count++;
+                shareholders.textContent = count;
+                if (count === shareholders_count) {
+                    clearInterval(interval);
+                }
+            }, 1);
+        }
+
+        //call the functions
+        customer_counter();
+        rating_counter();
+        shareholders_counter();
+
+    </script>
+
+        <div class="suggestion-loan">
+            <h2>Not Sure About Getting Loan?</h2>
+            <p>Try our loan calculator to get an idea of how much you will have to pay.</p>
+        </div>
+    </section>
+    <section id="loan-page" class="section">
+        <div id="loan-calculator">
+        <div class="calculator">
+            <h1>Loan Calculator</h1>
+            <div class="input">
+                <label for="loan-type">Type of Loan</label>
+                <select name="loan-type" id="loan-type">
+                    <option value="personal">Personal Loan</option>
+                    <option value="home">Home Loan</option>
+                    <option value="car">Car Loan</option>
+                    <option value="education">Education Loan</option>
+                </select>
+            </div>
+            <div class="input">
+                <label for="loan-amount">Loan Amount</label>
+                <input type="number" id="loan-amount" placeholder="Enter Loan Amount">
+            </div>
+            <div class="input">
+                <label for="loan-tenure">For How Long</label>
+                <input type="number" id="loan-tenure" placeholder="Enter Loan Tenure">
+            </div>
+            <div class="input">
+                <label for="repayment">Repayment</label>
+                <input type="number" id="repayment" placeholder="Enter Installments Rate">
+            </div>
+
+            <button class="btn" onclick="calcuate_loan()">Calculate</button>
+        </div>
+    </div>
+        <div class="result">
+            <h2>Accumulated Sum to be Paid: <span id="total-interest">0</span></h2>
+            <h2>Total Amount: <span id="total-amount">0</span></h2>
+            <h2>Benifit Comparison: <span id="comparison-amt">0</span></h2>
+        </div>
+    
+        <div class="not-sure">
+        <h3>Still Not Sure? <span>Consult with our expert </span></h3>       
+        <button class="contactbtn">Contact Us</button>
+        
         </div>
     </section>
 </body>

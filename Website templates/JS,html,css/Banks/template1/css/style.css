@@ -1,24 +1,16 @@
-/* The theme is of these palletes:
-    #F8F4F8
-    #fce5fc
-    #ffd6ff
-    #f3ceff
-    #e7c6ff
-    all font colors must be black
+/* General styles */
+/*Colors used in the website
+    AFE9B3
+    D2F2D5
+    FDFDFD
 */
 
- /* General styles */
 body {
     font-family: 'Open Sans', sans-serif;
     padding: 0;
     margin: 0;
 }
 
-/* Container for the main content
-    AFE9B3
-    D2F2D5
-    FDFDFD
-*/
 section{
     margin: 0;
     padding: 0;
@@ -29,6 +21,19 @@ section{
     align-items: center;
     text-align: left;
     margin-left: 1rem;
+    animation-name: come-in-right;
+    animation-duration: 2s;
+}
+
+@keyframes come-in-right {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 
 .home h1{
@@ -49,6 +54,8 @@ section{
 nav{
     width: 100%;
     z-index: 100;
+    position: fixed;
+    top: 0;
 }
 
 .navbar {
@@ -78,13 +85,22 @@ nav{
     display: none;
 }
 
+.section{
+    transition: opacity 0.1s ease; 
+    animation: fade-in 2s;
+}
+
+.section.active {
+    opacity: 1; /* Visible when active */
+}
+
 #Home{
-    background-image: linear-gradient(to bottom, #fdfdfd, #f6faff, #e8f8ff, #d9f8fd, #cff7f0, #caf5e6, #c7f3da, #c9f0cd, #c2eec7, #bcedc0, #b5ebba, #afe9b3);
+    background-color: #fbfdfb;
 }
 
 .navbar img{
-    width: 200px;
-    height: 90px;
+    width: 110px;
+    height: 50px;
 }
 
 .mid-image{
@@ -98,6 +114,18 @@ nav{
 
 .horizontal-text{
     display: inline-block;
+    animation: come-in-up 2s;
+}
+
+@keyframes come-in-up {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .horizontal-text p{
@@ -112,6 +140,7 @@ nav{
 .vertical-text{
     /*put this on right side*/
     display: inline-block;
+    animation: come-in-right 2s;
 }
 
 .right-text{
@@ -125,20 +154,31 @@ nav{
 }
 
 .button-container{
-    margin-top: 20%;
+    margin-top: 30%;
     margin-left: 75%;
     display: block;
+    animation: fade-in 4s;
 }
 
-button{
-    background-color: #ffffff;
-    color: #4A4A4A;
-    padding: 14px 20px;
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.get-started{
+    background-color: #f4f4f4;
+    color: #494141;
+    width: 90%;
+    height: 30px;
     margin: 8px 0;
     border: none;
     cursor: pointer;
-    border-radius: 2%;
-    font-size: .6rem;
+    border-radius: 4px;
+    font-size: .7rem;
 }
 
 button:hover {
@@ -149,23 +189,277 @@ button:hover {
 /* What we offer page*/
 
 #offers{
-    background-image: linear-gradient(to bottom, #afe9b3, #b5ebba, #bcedc0, #c2eec7, #c9f0cd, #c7f3da, #caf5e6, #cff7f0, #d9f8fd, #e8f8ff, #f6faff, #fdfdfd);
     display: flex;
     flex-direction: column;
 }
 
-#offers img{
+.Top{
+    animation: fade-in 7s;
+}
+
+.item-1 img{
     width: 30%;
+    height: 70%;
 }
 
 .item-1{
-    display: block;
+    display: flex;
     flex-direction: row;
     justify-content: space-between;
     padding: 1%;
+}
+
+.description h2{
+    font-size: 1.2rem;
+    font-family: 'Arial' sans-serif;
+    font-weight: 600;
+    color: #4A4A4A;
+    animation: come-in-up 2s;
+}
+
+.description p{
+    font-size: .7rem;
+    font-family: 'Arial' sans-serif;
+    font-weight: 400;
+    color: #4A4A4A;
+    text-align: justify;
+    animation: come-in-right 2s;
+}
+
+.item-2{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1%;
+}
+
+.item-2 img{
+    width: 20%;
+    height: 80%;
+}
+
+#offers{
+    height: 90vh;
+}
+
+#offers h1{
+    font-size: 1.5rem;
+    font-family: 'Arial' sans-serif;
+    font-weight: 500;
+    text-align: center;
+    color: #4A4A4A;
+}
+
+#offers h3{
+    font-size: 1.7rem;
+    font-family: 'Arial' sans-serif;
+    font-weight: 600;
+    text-align: center;
+    color: #4A4A4A;
+}
+
+/*Suggestion of loan*/
+.suggestion-loan{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1%;
+}
+
+.suggestion-loan h2{
+    font-size: 1.6rem;
+    font-family: 'Arial' sans-serif;
+    font-weight: 400;
+    color: #4A4A4A;
+}
+
+.suggestion-loan p{
+    font-size: .8rem;
+    font-family: 'Arial' sans-serif;
+    font-weight: 400;
+    color: #4A4A4A;
+    text-align: justify;
+}
+
+/* Loan calculator page */
+
+#loan-calculator{
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.calculator{
+    width: 80%;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    padding: 5%;
+    border: 1px solid #d5d5d5;
+    background-color: #f7f7f7;
+}
+
+.calculator h1{
+    margin-top: 12%;
+    font-size: 1.3rem;
+    font-family: 'Arial' sans-serif;
+    font-weight: 500;
+    color: #4A4A4A;
+}
+
+.input{
+    margin-left: 4%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1%;
+    margin-bottom: 5%;
+}
+
+.input input{
+    width: 100%;
+    height: 30px;
+    padding: 12px 8px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #4a4a4a;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-color: #fefdfd;
+    font-size: 0.7rem;
+}
+
+.input select{
+    width: 100%;
+    height: 30px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #5c5c5c;
+    border-radius: 4px;
+    box-sizing: border-box;
+    color: #323131;
+}
+
+.input label{
+    font-size: .75rem;
+    font-family: 'Arial' sans-serif;
+    font-weight: 400;
+    color: #4A4A4A;
+}
+
+.calculator button {
+    width: 40%;
+    height: 40px;
+    margin: 8px 0;
+    display: inline-block;
+    justify-items: center;
+    align-self: center;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-color: #303030;
+    font-size: 0.7rem;
+    color: #ffffff;
+}
+
+.result{
+    margin-top: 15%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 6%;
+}
+.result h2{
+    font-size: 1.4rem;
+    font-family: 'Arial' sans-serif;
+    font-weight: 500;
+    color: #4A4A4A;
+}
+
+/* put the span in new line*/
+.result span{
+    display: block;
+    text-align: center;
+    font-size: 1.2rem;
+    font-family: 'Arial' sans-serif;
+    font-weight: 100;
+    color: #4A4A4A;
 
 }
 
+.not-sure{
+    display: flex;
+    flex-direction: column;
+    padding: 1%;
+}
+
+.not-sure h3{
+    margin-left: 5%;
+    font-size: 1.5rem;
+    font-family: 'Arial' sans-serif;
+    font-weight: 400;
+    color: #4A4A4A;
+}
+
+.not-sure span{
+    font-size: 1.2rem;
+    font-family: 'Arial' sans-serif;
+    font-weight: 400;
+    color: #4A4A4A;
+    text-align: justify;
+}
+
+.contactbtn{
+    width: 30%;
+    height: 35px;
+    border-radius: 4px;
+    align-self: center;
+    background-color: #f4f4f4;
+    color: #494141;
+    border: none;
+    cursor: pointer;
+}
+
+#customersinfo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 1%;
+}
+
+#customersinfo div{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1%;
+}
+
+#customersinfo h2{
+    font-size: 1.2rem;
+    font-family: 'Arial' sans-serif;
+    font-weight: 400;
+    color: #4A4A4A;
+    text-align: center;
+}
+#customersinfo h1{
+    font-size: 1.5rem;
+    font-family: 'Arial' sans-serif;
+    font-weight: 400;
+    color: #4A4A4A;
+    text-align: center;
+    animation: count 2s ease-out forwards;
+    opacity: 0;
+}
+
+@keyframes count {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
 /* Media query for screens smaller than 600px */
 @media screen and (max-width: 600px) {
 
