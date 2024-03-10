@@ -4,7 +4,9 @@
     D2F2D5
     FDFDFD
 */
-
+/* 
+    For Mobile Devices
+*/
 body {
     font-family: 'Open Sans', sans-serif;
     padding: 0;
@@ -99,7 +101,7 @@ nav{
 }
 
 .navbar img{
-    width: 110px;
+    width: 260px;
     height: 50px;
 }
 
@@ -182,7 +184,7 @@ nav{
 }
 
 button:hover {
-    background-color: #4CAF50;
+    background-color: #cce3cd;
     color: rgb(255, 255, 255);
 }
 
@@ -386,20 +388,6 @@ button:hover {
     padding: 1%;
 }
 
-#loan-procedure h2{
-    font-size: 1.5rem;
-    font-family: 'Arial' sans-serif;
-    font-weight: 400;
-    color: #4A4A4A;
-}
-
-#loan-procedure p{
-    font-size: .8rem;
-    font-family: 'Arial' sans-serif;
-    font-weight: 400;
-    color: #4A4A4A;
-    text-align: justify;
-}
 .steps{
     display: flex;
     flex-direction: column;
@@ -410,15 +398,43 @@ button:hover {
 }
 
 .step{
-    margin-top: 5%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    align-items: center;
+    margin-top: 5%;
     padding: 1%;
     background-color: #f7f7f7;
+    border: #303030 1px solid;
+    border-radius: 4px;
     width: 90%;
+    height: 30vh;
 }
 
+.step img{
+    margin-top: 15%;
+    width: 20%;
+}
+
+.step h2{
+    font-size: 1.5rem;
+    font-family: 'Arial' sans-serif;
+    font-weight: 400;
+    color: #4A4A4A;
+    text-align: center;
+} 
+
+.step p{
+    font-size: .8rem;
+    font-family: 'Arial' sans-serif;
+    font-weight: 400;
+    color: #4A4A4A;
+    text-align: center;
+    width: 60%;
+}
+
+.steps :hover{
+    background-color: #afd5ef;
+} 
 
 /* put the span in new line*/
 .result span{
@@ -625,6 +641,21 @@ button:hover {
     width: 40%;
 }
 
+/*
+    Footer
+*/
+
+.footer-info{
+    background-color: rgb(237, 237, 237);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-info  img{
+    width: 100%;
+}
+
 /* Media query for screens smaller than 600px */
 @media screen and (max-width: 600px) {
 
@@ -665,4 +696,47 @@ button:hover {
         display: block;
         text-align: left;
     }
+}
+
+@media screen and (min-width: 1000px){  
+
+.navbar a {
+    float: right;
+    display: block;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 30px 16px;
+    text-decoration: none;
+}
+
+.navbar img{
+    width: 22%;
+    height: 1%;
+}
+
+.home{
+    margin-top: 3%;
+    height: 30vh;
+}
+
+.home h1{
+    font-size: 2.6rem;
+}
+    
+.home h2{
+    font-size: 1.4rem;
+}
+
+.mid-image{
+    /*
+        make the container smaller
+    */
+    height: 50vh;
+    background-image: url('../images/imgs/piggy_green.png');
+    /*make the image fit to the div*/
+    background-size: cover;
+    background-position: left;
+    background-repeat: no-repeat;
+}
+
 }
