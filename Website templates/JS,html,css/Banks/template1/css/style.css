@@ -376,6 +376,50 @@ button:hover {
     color: #4A4A4A;
 }
 
+
+/* Loan procedure section*/
+
+#loan-procedure{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1%;
+}
+
+#loan-procedure h2{
+    font-size: 1.5rem;
+    font-family: 'Arial' sans-serif;
+    font-weight: 400;
+    color: #4A4A4A;
+}
+
+#loan-procedure p{
+    font-size: .8rem;
+    font-family: 'Arial' sans-serif;
+    font-weight: 400;
+    color: #4A4A4A;
+    text-align: justify;
+}
+.steps{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1%;
+    width: 100%;
+}
+
+.step{
+    margin-top: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1%;
+    background-color: #f7f7f7;
+    width: 90%;
+}
+
+
 /* put the span in new line*/
 .result span{
     display: block;
@@ -460,6 +504,127 @@ button:hover {
         opacity: 1;
     }
 }
+
+/* Comparision Section*/
+#comparison {
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1%;
+}
+
+.comparison-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #f7f7f7;
+}
+
+.comparison-table th,
+.comparison-table td {
+    border: 1px solid #c6c6c6;
+    padding: 8px;
+}
+
+.comparison-table th {
+    background-color: #ffffff;
+    color: #424242;
+    text-align: center;
+}
+
+.comparison-table tr:nth-child(odd) {
+    background-color: #f7f7f7;
+}
+
+.comparison-table tr:nth-child(even) {
+    background-color: #d8d8d8;
+}
+
+.comparison-table p {
+    text-align: center;
+}
+
+/* Start Consultation Section*/
+#start-consulting{
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1%;
+}
+
+#start-consulting h1{
+    font-size: 1.5rem;
+    font-family: 'Arial' sans-serif;
+    font-weight: 500;
+    color: #4A4A4A;
+    text-align: center;
+}
+
+#start-consulting p{
+    font-size: .8rem;
+    font-family: 'Arial' sans-serif;
+    font-weight: 400;
+    color: #4A4A4A;
+    text-align: justify;
+    width: 95%;
+}
+
+.consult-box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1%;
+    border: #303030 1px solid;
+    border-radius: 4px;
+    background-color: #f7f7f7;
+    width: 95%;
+    height: 50vh;
+}
+
+.email {
+    margin-top: 5%;
+    width: 95%;
+    height: 30px;
+}
+
+.email input {
+    display: inline-block;
+    width: 100%;
+    height: 40px;
+    padding: 12px 8px;
+    margin: 8px 0;
+    border: 1px solid #4a4a4a;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-color: #fefdfd;
+    font-size: 0.7rem;
+}
+
+.email button {
+    width: 100%;
+    height: 45px;
+    display: inline-block;
+    border-radius: 4px;
+    align-self: center;
+    background-color: #303030;
+    color: #ffffff;
+}
+
+.phone-img {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 1%;
+    width: 95%;
+    height: 80vh;
+    margin: 18%;
+}
+
+.phone-img img{
+    width: 40%;
+}
+
 /* Media query for screens smaller than 600px */
 @media screen and (max-width: 600px) {
 

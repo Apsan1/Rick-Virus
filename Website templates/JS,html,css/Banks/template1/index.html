@@ -89,61 +89,12 @@
             </div>
         </section>
 
-    <script>
-        var customer_count = 60;
-        var total_rating = 4.5;
-        var shareholders_count = 1500;
-        var customers = document.querySelector('.customers_count');
-        var rating = document.querySelector('#total_rating');
-        var shareholders = document.querySelector('#shareholders_count');
-
-        //make counter animation for all the values
-        //for customers
-        function customer_counter() {
-            var count = 0;
-            var interval = setInterval(() => {
-                count++;
-                customers.textContent = count;
-                if (count === customer_count) {
-                    clearInterval(interval);
-                }
-            }, 50);
-        }
-        //for rating
-        function rating_counter() {
-            var count = 0;
-            var interval = setInterval(() => {
-                count += 0.1;
-                rating.textContent = count.toFixed(1);
-                if (count === total_rating) {
-                    clearInterval(interval);
-                }
-            }, 50);
-        }
-        //for shareholders
-        function shareholders_counter() {
-            var count = 0;
-            var interval = setInterval(() => {
-                count++;
-                shareholders.textContent = count;
-                if (count === shareholders_count) {
-                    clearInterval(interval);
-                }
-            }, 1);
-        }
-
-        //call the functions
-        customer_counter();
-        rating_counter();
-        shareholders_counter();
-
-    </script>
-
         <div class="suggestion-loan">
             <h2>Not Sure About Getting Loan?</h2>
             <p>Try our loan calculator to get an idea of how much you will have to pay.</p>
         </div>
     </section>
+
     <section id="loan-page" class="section">
         <div id="loan-calculator">
         <div class="calculator">
@@ -182,8 +133,107 @@
         <div class="not-sure">
         <h3>Still Not Sure? <span>Consult with our expert </span></h3>       
         <button class="contactbtn">Contact Us</button>
-        
         </div>
     </section>
+
+    <section id="loan-procedure" class="section">
+        <h1>Our Procedure</h1>
+        <h3>4 Steps to follow</h3>
+        <p>Our loan procedure is simple and easy. Follow these 4 steps to get your loan approved.</p>
+        <div class="steps">
+            <div class="step">
+                <h2>Apply for loan</h2>
+                <img src="images/imgs/savings.png" alt="apply">
+                <p>Fill the loan application form and submit the required documents.</p>
+            </div>
+            <div class="step">
+                <h2>Verification</h2>
+                <p>Our team will verify your documents and application form.</p>
+            </div>
+            <div class="step">
+                <h2>Approval</h2>
+                <p>Once your documents are verified, your loan will be approved.</p>
+            </div>
+            <div class="step">
+                <h2>Disbursal</h2>
+                <p>After approval, your loan amount will be disbursed to your account.</p>
+            </div> 
+
+        </div>
+
+    </section>
+
+    <section id="comparison" class="section">
+        <h1 style="text-align: center;">Comparison</h1>
+        <table class="comparison-table">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>Our Finance</th>
+                    <th>Other Banks</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Payment Per Transaction:</td>
+                    <td>0%</td>
+                    <td>2%</td>
+                </tr>
+                <tr>
+                    <td>Loan Interest Rate:</td>
+                    <td>5%</td>
+                    <td>7%</td>
+                </tr>
+                <tr>
+                    <td>Savings Interest Rate:</td>
+                    <td>7%</td>
+                    <td>5%</td>
+                </tr>
+                <tr>
+                    <td>Loan Tenure:</td>
+                    <td>Within 2 Years</td>
+                    <td>Within 6 Months</td>
+                </tr>
+                <tr>
+                    <td>Loan Amount:</td>
+                    <td>1000 - 1,00,000</td>
+                    <td>10,000 - 50,000</td>
+                </tr>
+                <tr>
+                    <td>Procedures:</td>
+                    <td>Easy</td>
+                    <td>Complex</td>
+                </tr>
+                <tr>
+                    <td>Hidden Charges:</td>
+                    <td>No</td>
+                    <td>Yes</td>
+                </tr>
+                <tr>
+                    <td>Benefits:</td>
+                    <td>More</td>
+                    <td>Less</td>
+                </tr>
+            </tbody>
+        </table>
+        <p style="text-align: center;">Our Finance is the best choice for all your financial needs. We offer the best rates and the best services.</p>
+    </section>
+    
+    <section id="start-consulting" class="section">
+        <div class="consult-box">
+        <h1>Start Consulting</h1>
+        <p>Get the best financial advice from our experts. We offer the best financial advice for all your needs.</p>
+        <div class="email">
+            <input type="email" id="email" placeholder="Enter Your Email">
+            <button class="btn">Submit</button>
+        </div>
+        <div class="phone-img">
+            <h2>Contact Us on Phone</h2>
+            <img src="images/imgs/phone-number.png" alt="phone-number">
+        </div>
+    </div>
+    </section>
+
+    <script src="js/script.js"></script>
 </body>
 </html>
